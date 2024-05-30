@@ -7,4 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
     navMenu.classList.toggle("hidden");
     header.classList.toggle("open");
   });
+
+  const languageSwitcher = document.getElementById("languageSwitcher");
+  const currentLanguage = document.getElementById("currentLanguage");
+
+  languageSwitcher.addEventListener("click", function () {
+    if (currentLanguage.textContent === "RU") {
+      currentLanguage.textContent = "EN";
+    } else {
+      currentLanguage.textContent = "RU";
+    }
+  });
 });

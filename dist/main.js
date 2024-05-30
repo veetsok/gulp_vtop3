@@ -145,6 +145,59 @@ function renderSocialIcons() {
 
 document.addEventListener("DOMContentLoaded", renderSocialIcons);
 
+const reviews = [
+  {
+    title: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
+    date: "10.02.2023",
+  },
+  {
+    title: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
+    date: "10.02.2023",
+  },
+  {
+    title: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
+    date: "10.02.2023",
+  },
+  {
+    title: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
+    date: "10.02.2023",
+  },
+  {
+    title: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
+    date: "10.02.2023",
+  },
+  {
+    title: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
+    date: "10.02.2023",
+  },
+  {
+    title: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
+    date: "10.02.2023",
+  },
+];
+
+const blogAreaScroll = document.getElementById("blog__area__scroll");
+
+reviews.forEach((review) => {
+  const reviewCard = document.createElement("div");
+  reviewCard.className = "review__card";
+
+  const reviewCardText = document.createElement("div");
+  reviewCardText.className = "review__card__text";
+
+  const titleElement = document.createElement("h4");
+  titleElement.textContent = review.title;
+
+  const dateElement = document.createElement("h6");
+  dateElement.textContent = review.date;
+
+  reviewCardText.appendChild(titleElement);
+  reviewCardText.appendChild(dateElement);
+  reviewCard.appendChild(reviewCardText);
+
+  blogAreaScroll.appendChild(reviewCard);
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const burgerMenu = document.getElementById("burger-menu");
   const navMenu = document.getElementById("nav-menu");
@@ -153,6 +206,17 @@ document.addEventListener("DOMContentLoaded", function () {
   burgerMenu.addEventListener("click", function () {
     navMenu.classList.toggle("hidden");
     header.classList.toggle("open");
+  });
+
+  const languageSwitcher = document.getElementById("languageSwitcher");
+  const currentLanguage = document.getElementById("currentLanguage");
+
+  languageSwitcher.addEventListener("click", function () {
+    if (currentLanguage.textContent === "RU") {
+      currentLanguage.textContent = "EN";
+    } else {
+      currentLanguage.textContent = "RU";
+    }
   });
 });
 
@@ -229,59 +293,6 @@ const banners2 = [
 swiperData("mySwiper", banners);
 swiperData("mySwiper1", banners1);
 swiperData("mySwiper2", banners2);
-
-const reviews = [
-  {
-    title: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
-    date: "10.02.2023",
-  },
-  {
-    title: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
-    date: "10.02.2023",
-  },
-  {
-    title: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
-    date: "10.02.2023",
-  },
-  {
-    title: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
-    date: "10.02.2023",
-  },
-  {
-    title: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
-    date: "10.02.2023",
-  },
-  {
-    title: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
-    date: "10.02.2023",
-  },
-  {
-    title: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
-    date: "10.02.2023",
-  },
-];
-
-const blogAreaScroll = document.getElementById("blog__area__scroll");
-
-reviews.forEach((review) => {
-  const reviewCard = document.createElement("div");
-  reviewCard.className = "review__card";
-
-  const reviewCardText = document.createElement("div");
-  reviewCardText.className = "review__card__text";
-
-  const titleElement = document.createElement("h4");
-  titleElement.textContent = review.title;
-
-  const dateElement = document.createElement("h6");
-  dateElement.textContent = review.date;
-
-  reviewCardText.appendChild(titleElement);
-  reviewCardText.appendChild(dateElement);
-  reviewCard.appendChild(reviewCardText);
-
-  blogAreaScroll.appendChild(reviewCard);
-});
 
 /**
  * Swiper 11.1.3
