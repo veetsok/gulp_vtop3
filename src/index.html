@@ -1,0 +1,73 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <title>VTOP3</title>
+  </head>
+  <body>
+    <div class="dot__left-wrapper">
+      <div class="dot__left"></div>
+    </div>
+    <div class="dot__right"></div>
+    @@include('components/header/header.html')
+    @@include('components/main/main.html')
+    @@include('components/footer/footer.html')
+
+    <script src="header.js"></script>
+    <script src="main.js"></script>
+    <script src="swiper.js"></script>
+    <script src="footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 0,
+        centeredSlides: true,
+        speed: 1500,
+        direction: "vertical",
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          reverseDirection: false,
+        },
+        loop: true,
+        slidesPerView: "auto",
+        allowTouchMove: false,
+      });
+
+      var swiper2 = new Swiper(".mySwiper1", {
+        spaceBetween: 0,
+        centeredSlides: true,
+        speed: 1500,
+        direction: "vertical",
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          reverseDirection: true,
+        },
+        loop: true,
+        slidesPerView: "auto",
+        allowTouchMove: false,
+      });
+
+      var swiper3 = new Swiper(".mySwiper2", {
+        spaceBetween: 0,
+        centeredSlides: true,
+        speed: 1500,
+        direction: "vertical",
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          reverseDirection: false,
+        },
+        loop: true,
+        slidesPerView: "auto",
+        allowTouchMove: false,
+      });
+    </script>
+  </body>
+</html>

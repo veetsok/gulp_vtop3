@@ -1,0 +1,169 @@
+#header__mobile {
+  display: none;
+}
+
+header {
+  margin-top: 16px;
+  border: 4px solid #f97247;
+  border-radius: 64px;
+  padding: 24px 48px;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .image__block {
+  width: 287px;
+  height: 32px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+#headerActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+#headerActions button {
+  border: 2px solid #ebf29d;
+  background: transparent;
+  display: inline-flex;
+  padding: 14px;
+}
+
+#headerActions button svg {
+  fill: #ebf29d;
+}
+
+/* MOBILE */
+
+/* Стили для бургер-меню */
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.burger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* Стили для открытого состояния */
+header.open .burger-menu span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+header.open .burger-menu span:nth-child(2) {
+  opacity: 0;
+}
+
+header.open .burger-menu span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Скрытие меню по умолчанию */
+.nav-menu.hidden {
+  display: none;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  #header__desctop {
+    display: none;
+  }
+
+  #header__mobile {
+    display: contents;
+  }
+
+  #header__mobile header .image__block {
+    width: 54px;
+    height: 18px;
+  }
+
+  #header__mobile header button {
+    padding: 8px;
+    border: 2px solid #ebf29d;
+  }
+
+  #header__mobile header #mobile__btns {
+    display: flex;
+    align-items: center;
+    gap: 11.5px;
+  }
+
+  header {
+    margin-top: 10px;
+    border: 4px solid #f97247;
+    border-radius: 64px;
+    padding: 10px 14px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  #header__mobile ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #header__mobile ul li {
+    border: 2px solid #f97247;
+    border-radius: 28px;
+    padding: 13px 20px;
+    width: 100%;
+  }
+
+  #header__mobile .header__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #header__mobile #headerActions {
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    margin-top: 30px;
+  }
+
+  #header__mobile #headerActions button {
+    width: 100%;
+  }
+
+  .open {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    height: 100%;
+    background-color: #191d0a;
+    position: fixed;
+    border-radius: 0;
+    border: none;
+    margin: 0;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    flex-direction: column;
+  }
+}

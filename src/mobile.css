@@ -1,0 +1,150 @@
+/* MOBILE */
+
+@media (max-width: 1024px) {
+  footer {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 109%;
+  }
+
+  h2 {
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 230px;
+    padding-top: 70px;
+  }
+
+  .text__block {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .text__block h2 {
+    font-size: 20px;
+  }
+
+  .text__block button {
+    margin: 0 auto;
+  }
+
+  #blog {
+    gap: 18px;
+  }
+
+  #blog__area {
+    border: 2px solid #f97247;
+    border-radius: 50px;
+    padding: 10px 6px 10px 10px;
+  }
+
+  #blog__area__scroll {
+    gap: 10px;
+    padding-right: 6px;
+  }
+
+  #blog__area__scroll::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Цвет ползунка */
+  #blog__area__scroll::-webkit-scrollbar-thumb {
+    width: 4px;
+    border-radius: 4px;
+  }
+
+  .review__card {
+    padding: 15px 35px;
+  }
+
+  .review__card__text {
+    gap: 6px;
+  }
+
+  .review__card__text h4 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+  }
+
+  #main__swipper {
+    transform: rotate(90deg);
+    gap: 8px;
+    /* left: 0; */
+    top: -12%;
+  }
+
+  #main__swipper .swiper {
+    max-width: 49px;
+    /* max-height: 108px; */
+  }
+
+  #main__swipper .image__block {
+    max-width: 49px;
+    max-height: 108px;
+  }
+
+  footer {
+    padding: 20px;
+    border-radius: 50px 50px 0 0;
+  }
+
+  footer .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  footer nav {
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  #social {
+    text-align: left;
+    gap: 8px;
+  }
+
+  #social__btns a {
+    width: 27px;
+    height: 27px;
+  }
+
+  .swiper-slide {
+    width: 99.13px !important;
+    height: 108.25px !important;
+  }
+}
+
+@media (max-width: 426px) {
+  #main__swipper {
+    top: -8%;
+  }
+}

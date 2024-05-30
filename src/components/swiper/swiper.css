@@ -1,0 +1,33 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+.swiper-slide {
+  color: #fff !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  width: 99.13px !important;
+  height: 220.25px !important;
+}
+
+#main__swipper {
+  max-height: 1027px;
+  max-width: 368px;
+  position: absolute;
+  left: 40%;
+  top: 0;
+  display: flex;
+  gap: 17px;
+  z-index: -1;
+}
+
+main .image__block img {
+  opacity: 50%;
+}
